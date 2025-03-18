@@ -1,3 +1,25 @@
+/* @tailwind base; */
 @import "tailwindcss";
 
+@theme {
+  --color-*: initial;
+  --color-white: #fff;
+  --color-black-100: #000319;
+}
 
+/* Custom keyframes */
+@keyframes spotlight {
+  0% {
+    opacity: 0;
+    transform: translate(-72%, -62%) scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -40%) scale(1);
+  }
+}
+
+/* Define animation utility */
+.animate-spotlight {
+  animation: spotlight 2s ease 0.75s 1 forwards;
+}
